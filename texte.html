@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #bbb;
+      }
+
+      input[type="number"] {
+        width: 80px;
+        height: 40px;
+        font-size: 20px;
+        margin: 10px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px #bbb;
+      }
+
+      button {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px #333;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" id="num1">
+      <input type="number" id="num2">
+      <button id="sum-button">Somar</button>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      const num1Input = document.getElementById("num1");
+      const num2Input = document.getElementById("num2");
+      const sumButton = document.getElementById("sum-button");
+      const result = document.getElementById("result");
+
+      sumButton.addEventListener("click", function() {
+        const num1 = parseInt(num1Input.value);
+        const num2 = parseInt(num2Input.value);
+        result.innerHTML = "Resultado: " + (num1 + num2);
+      });
+    </script>
+  </body>
+</html>
